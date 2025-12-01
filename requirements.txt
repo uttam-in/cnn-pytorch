@@ -1,0 +1,14 @@
+# Core dependencies
+torch>=2.0.0
+torchvision>=0.15.0
+streamlit>=1.25.0
+Pillow>=9.5.0
+
+# Testing dependencies
+hypothesis>=6.82.0
+pytest>=7.4.0
+pytest-cov>=4.1.0
+
+# Additional utilities
+numpy>=1.24.0
+bcrypt>=4.0.0
