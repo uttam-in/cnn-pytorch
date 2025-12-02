@@ -7,7 +7,7 @@
   - Create configuration file for model parameters and paths
   - _Requirements: 6.1_
 
-- [ ] 2. Implement CNN model architecture
+- [x] 2. Implement CNN model architecture
   - Create `src/model.py` with `CropDiseaseClassifier` class inheriting from `nn.Module`
   - Implement convolutional blocks with Conv2d, ReLU, MaxPool2d, and Dropout layers
   - Implement fully connected layers for classification
