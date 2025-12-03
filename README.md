@@ -62,3 +62,7 @@ This project follows a modular architecture with clear separation between:
 - Streamlit user interface
 
 See the design document in `.kiro/specs/crop-disease-diagnosis/design.md` for detailed architecture information.
+
+pytest:
+
+python -m pytest tests/test_transforms.py -v

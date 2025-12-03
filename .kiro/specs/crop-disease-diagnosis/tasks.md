@@ -21,7 +21,7 @@
   - Test model contains expected layer types
   - _Requirements: 6.2, 6.3, 6.4, 6.5, 6.6_
 
-- [ ] 3. Implement image transformation pipeline
+- [x] 3. Implement image transformation pipeline
   - Create `src/transforms.py` with `ImageTransformer` class
   - Implement resize transformation to target dimensions
   - Implement normalization with configurable mean and std
