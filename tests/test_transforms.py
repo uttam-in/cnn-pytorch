@@ -179,3 +179,34 @@ def test_transform_preserves_dimensions():
         image = Image.new('RGB', size, color='blue')
         result = transformer.transform(image)
         assert result.shape == (3, 256, 256)
+
+
+def test_transform_real_disease_image():
+    """Test transformation of a real bacterial leaf blight image."""
+    import os
+    
+    transformer = ImageTransformer(target_size=(224, 224))
+    
+    # Load the real image
+    image_path = "data/rice_leaf_diseases/Bacterial leaf blight/DSC_0365.JPG"
+    
+    # Check if file exists
+    assert os.path.exists(image_path), f"Image file not found: {image_path}"
+    
+    # Load the image
+    image = Image.open(image_path)
+    
+    # Transform the image
+    result = transformer.transform(image)
+    
+    # Check output properties
+    assert isinstance(result, torch.Tensor)
+    assert result.shape == (3, 224, 224)
+    assert result.dtype == torch.float32
+    
+    # Check that values are normalized (should be roughly in range [-3, 3] after normalization)
+    assert result.min() >= -5.0 and result.max() <= 5.0
+    
+    # Check that the image was actually loaded (not all zeros or all ones)
+    assert not torch.all(result == 0)
+    assert not torch.all(result == 1)
