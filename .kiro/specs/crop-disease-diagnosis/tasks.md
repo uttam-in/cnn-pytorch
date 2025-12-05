@@ -208,7 +208,7 @@
   - Test error scenarios: corrupted images, missing model
   - _Requirements: 1.1, 2.2, 3.1, 4.1, 5.1_
 
-- [ ] 13. Create sample model and test data
+- [x] 13. Create sample model and test data
   - Create a simple trained model or random initialized model for testing
   - Save model weights to `models/` directory
   - Create `config/class_names.json` with sample disease classes

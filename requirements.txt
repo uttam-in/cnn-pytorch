@@ -12,3 +12,4 @@ pytest-cov>=4.1.0
 # Additional utilities
 numpy>=1.24.0
 bcrypt>=4.0.0
+matplotlib>=3.7.0
